@@ -18,10 +18,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: darkTheme(),
-      initialRoute: InputScreen.id,
+      initialRoute: InputScreen.routeName,
       routes: {
-        InputScreen.id: (context) => const InputScreen(),
-        ResultScreen.id: (context) => const ResultScreen(),
+        InputScreen.routeName: (context) => const InputScreen(),
+        ResultScreen.routeName: (context) => const ResultScreen(),
       },
     );
   }
