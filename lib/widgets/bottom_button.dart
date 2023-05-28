@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class BottomPageButtonWidget extends StatelessWidget {
-  const BottomPageButtonWidget({
+class BottomButtonWidget extends StatelessWidget {
+  const BottomButtonWidget({
     Key? key,
     required this.onTap,
     required this.text,

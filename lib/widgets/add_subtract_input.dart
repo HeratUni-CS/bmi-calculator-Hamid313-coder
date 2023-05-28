@@ -1,7 +1,8 @@
+import 'package:bmi_starting/constants/consts.dart';
 import 'package:flutter/material.dart';
 
-class SubstractAddInputWidget extends StatelessWidget {
-  const SubstractAddInputWidget(
+class AddSubtractInputWidget extends StatelessWidget {
+  const AddSubtractInputWidget(
       {Key? key,
       required this.text,
       required this.counter,
@@ -16,6 +17,44 @@ class SubstractAddInputWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text("hello"));
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            text,
+            style: TextStyleGlobal,
+          ),
+          Text(
+            '$counter',
+            style: TextStyleNumbers,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              FloatingActionButton(
+                  heroTag: null,
+                  backgroundColor: const Color(0xFF8D8E98),
+                  onPressed: stateSubstract,
+                  child: const Icon(
+                    Icons.remove,
+                    color: Colors.white,
+                  )),
+              const SizedBox(
+                width: 10,
+              ),
+              FloatingActionButton(
+                  heroTag: null,
+                  backgroundColor: const Color(0xFF8D8E98),
+                  onPressed: stateAdd,
+                  child: const Icon(
+                    Icons.add,
+                    color: Colors.white,
+                  )),
+            ],
+          )
+        ],
+      ),
+    );
   }
 }

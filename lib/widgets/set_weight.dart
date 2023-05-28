@@ -7,14 +7,14 @@ class SetWeightWidget extends StatelessWidget {
     Key? key,
     required this.counter,
     required this.text,
-    required this.onPressedSubstract,
-    required this.onPressedAdd,
+    required this.onSubstract,
+    required this.onAdd,
   }) : super(key: key);
 
   final int counter;
   final String text;
-  final Function() onPressedSubstract;
-  final Function() onPressedAdd;
+  final Function() onSubstract;
+  final Function() onAdd;
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +22,13 @@ class SetWeightWidget extends StatelessWidget {
       height: 200,
       margin: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-          color: const Color(0xFF1D1E33),
+          color: Color.fromARGB(255, 29, 30, 51),
           borderRadius: BorderRadius.circular(10)),
-      child: SubstractAddInputWidget(
+      child: AddSubtractInputWidget(
         text: text,
         counter: counter,
-        stateSubstract: onPressedSubstract,
-        stateAdd: onPressedAdd,
+        stateSubstract: onSubstract,
+        stateAdd: onAdd,
       ),
     );
   }
